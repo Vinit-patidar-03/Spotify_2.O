@@ -1,0 +1,402 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: 'Ubuntu',sans-serif;
+    display: flex;
+    background-color: rgb(31, 30, 30);
+}
+
+#navbar
+{
+    background-color: black;
+    height:100vh;
+    width: 215px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+  
+#navbar .logo
+{
+    color: white;
+}
+
+.logo img
+{
+    width:140px;
+    border-radius: 20px;
+    filter: invert();
+    margin: 20px 25px;
+}
+
+ #navbar ul
+ {
+    margin-bottom: 60px;
+    font-size: 14px;
+ }
+
+#navbar ul li
+{
+    list-style-type: none;
+    margin: 15px 25px;
+    cursor: pointer;
+    color: rgb(151, 147, 147);
+    font-weight: bold;
+}
+
+#navbar ul li:hover
+{
+    color: white;
+    transition: color 0.5s;
+}
+
+.feedback
+{
+    position: absolute;
+    bottom: 100px;
+    font-size: 0.7rem;
+    color: rgb(151, 147, 147);
+}
+
+.feedback div
+{
+    margin: 25px 0px;
+}
+
+.feedback div span
+{
+    margin: 0px 10px 0px 25px;
+    cursor: pointer;
+}
+
+.language
+{
+     padding: 8px 10px;
+     border-radius: 20px;
+     margin: 40px 25px;
+     cursor: pointer;
+     background-color: black;
+     color: white;
+     font-weight: bold;
+     border: 1px solid rgb(151, 147, 147);
+}
+
+.language:hover
+{
+    border: 1px solid white;
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+
+.btn
+{
+     padding: 5px;
+     border-radius: 5px;
+     display: block;
+     margin: auto;
+}
+
+.btn:hover
+{
+    background-color: red;
+    color:white;
+    font-weight: bold;
+}
+
+.container
+{
+    width:100%;
+    margin: 0px 0px 0px 215px;
+    color: white;
+}
+
+.main
+{
+    display: flex;
+    align-items: center;
+}
+
+.container2::-webkit-scrollbar
+{
+    display: none;
+}
+.container1::-webkit-scrollbar
+{
+    display: none;
+}
+
+.container h2
+{
+    margin: 10px;
+}
+
+.container1
+{
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    margin: 70px auto;
+}
+
+.container3
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.container4
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+.container2
+{
+    margin: 10px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#SongImg img
+{
+   width: 300px;
+}
+
+#SongImg
+{
+    display: flex;
+    justify-content: center;
+}
+.description
+{
+    text-align: center;
+    color: rgb(150, 142, 142);
+}
+.song
+{
+    width: 220px;
+    height: 300px;
+    color: white;
+    border-radius: 10px;
+    margin: 20px 10px;
+    position: relative;
+    background-color: rgb(57, 54, 54);
+    display: flex;
+    flex-direction:  column;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.SongImage img
+{
+    display: block;
+    margin: 20px auto ;
+    width:80%;
+}
+
+#SongImg img
+{
+    width: 60px;
+    margin: 0px 10px;
+}
+
+.newnav
+{
+    display: none;
+}
+
+.nav 
+{
+    display: none;
+}
+
+#singer
+{
+    font-size: 0.8rem;
+    color: rgb(146, 141, 141);
+}
+
+.SongImage
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Name
+{
+    display: inline;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.Play
+{
+    position: absolute;
+    right: 10px;
+    top:150px;
+    visibility: hidden;
+}
+
+.song:hover
+{
+    background-color: rgb(71, 68, 68);
+    transition: all 0.5s;
+}
+
+.song:hover .Play
+{
+    visibility: visible;
+    transform:  translateY(-10px);
+    transition: all 0.5s;
+}
+.Box
+{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0%;
+    background-color: rgb(58, 54, 54);
+    color: white;
+}
+
+.box
+{
+    height:80px;
+    width: 400px;
+    border-radius: 10px;
+    position: fixed;
+    left: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.progress 
+{
+    width:400px;
+    height:3px;
+    border-radius: 1.5px ;
+    margin:10px auto;
+    background-color: rgb(155, 147, 147);
+}
+
+.combo
+{
+    display: flex;
+    align-items: center;
+    margin-right:10px;
+}
+#ProgressBar
+{
+    width:0%;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: rgb(58, 58, 212);
+}
+
+.top
+{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    align-items: center;
+}
+.top::before
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.Combo
+{
+   position: fixed;
+   right: 10px;
+}
+
+.runner
+{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.btn1
+{
+    background-color: transparent;
+    color:white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 15px;
+    margin: 0px 5px;
+    border: 1px solid white;
+    border-radius: 25px;
+}
+
+.btn1:hover
+{
+    transform: scale(1.05);
+    transition:  transform 0.3s;
+}
+.controls
+{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.controls img
+{
+    width: 30px;
+    margin: 0px 15px;
+    cursor: pointer;
+    filter: invert();
+}
+
+.others
+{
+    display: flex;
+    align-items: center;
+}
+
+i
+{
+    cursor: pointer;
+}
+
+.volume
+{
+    width: 150px;
+     height: 3px;
+     margin:0px 10px;
+     border-radius: 1.5px;
+     background-color: rgb(155, 147, 147);
+}
+
+#songName
+{
+    display: inline-block;
+    color: white;
+}
