@@ -149,15 +149,21 @@
         height: 280px;
         width: 250px;
     }
-  
-      .song:hover .Play
-    {
-       transform: translateY(-10px) !important;
-    }
 
     .btn2
     {
         display: none;
+    }
+
+    .Play
+{
+    right: 25px !important;
+    top:175px !important;
+}
+
+     .song:hover .Play
+    {
+       transform: translateY(-10px) !important;
     }
 
     .nav
