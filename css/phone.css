@@ -149,6 +149,11 @@
         height: 280px;
         width: 250px;
     }
+  
+      .song:hover .Play
+    {
+       transform: translateY(-10px) !important;
+    }
 
     .btn2
     {
