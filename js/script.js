@@ -84,7 +84,7 @@ for (let i = 0; i < songs.length; i++) {
             {
                 audio.pause();
                 Play[i].innerHTML = '<i class="fa-solid fa-circle-play fa-3x" style="color:#30ea30; ">'
-                play.innerHTML = '<img src="./images/Play.png" alt="pause">'
+                play.innerHTML = '<img src="./images/play.png" alt="pause">'
             }
             prev_song_Index = i;
             index=i;
