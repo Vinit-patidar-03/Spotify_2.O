@@ -1,6 +1,6 @@
 let index = 0;
-let volume_up=document.getElementById('incr_volume');
-let volume_down=document.getElementById('decr_volume');
+let volume_up = document.getElementById('incr_volume');
+let volume_down = document.getElementById('decr_volume');
 let prev_song_Index;
 let play = document.getElementById('play');
 let runner = document.getElementsByClassName('runner');
@@ -27,16 +27,14 @@ let forward = document.getElementById('forward');
 let tensec_back = document.getElementById('10s_back');
 let tensec_forward = document.getElementById('10s_forward');
 let audio = new Audio(`${songs[index].songLocation}`);
-volume_down.addEventListener('click',()=>
-{
-   audio.volume=0;
-   runner[0].style.width='0%';
+volume_down.addEventListener('click', () => {
+    audio.volume = 0;
+    runner[0].style.width = '0%';
 })
 
-volume_up.addEventListener('click',()=>
-{
-   audio.volume=1;
-   runner[0].style.width='100%'
+volume_up.addEventListener('click', () => {
+    audio.volume = 1;
+    runner[0].style.width = '100%'
 })
 let SongImg = document.getElementById('SongImg');
 
@@ -68,11 +66,19 @@ for (let i = 0; i < songs.length; i++) {
             Play[i].innerHTML = '<i class=" fa-solid fa-circle-pause fa-3x" style="color:#30ea30; ">'
             play.innerHTML = '<img src="./images/Pause.png" alt="pause">'
             prev_song_Index = i;
-            index=i;
+            index = i;
         }
         else {
-            audio.pause();
-            Play[index].innerHTML = '<i class="fa-solid fa-circle-play fa-3x" style="color:#30ea30;">'
+            if(index==i)
+            {
+                audio.pause();
+                Play[index].innerHTML = '<i class="fa-solid fa-circle-play fa-3x" style="color:#30ea30;">'
+                play.innerHTML = '<img src="./images/play.png" alt="pause">'
+            }
+            else
+            {
+                audio.pause();
+                  Play[index].innerHTML = '<i class="fa-solid fa-circle-play fa-3x" style="color:#30ea30;">'
             audio = new Audio(`${songs[i].songLocation}`);
             audio.play();
             timeupdate();
@@ -80,14 +86,15 @@ for (let i = 0; i < songs.length; i++) {
             songName.innerText = `${songs[i].songName}`;
             Play[i].innerHTML = '<i class="fa-solid fa-circle-pause fa-3x" style="color:#30ea30; ">'
             play.innerHTML = '<img src="./images/Pause.png" alt="pause">'
-            if(prev_song_Index==i)
-            {
+            if (prev_song_Index == i) {
                 audio.pause();
                 Play[i].innerHTML = '<i class="fa-solid fa-circle-play fa-3x" style="color:#30ea30; ">'
-                play.innerHTML = '<img src="./images/play.png" alt="pause">'
+                play.innerHTML = '<img src="./images/Play.png" alt="pause">'
             }
             prev_song_Index = i;
-            index=i;
+            index = i;
+            }
+          
         }
     })
 }
@@ -125,7 +132,7 @@ forward.addEventListener('click', () => {
         play.innerHTML = '<img src="./images/Pause.png" alt="pause">'
         songName.innerText = `${songs[index].songName}`;
         myProgressBar.style.width = "0%";
-       timeupdate();
+        timeupdate();
     }
 });
 backward.addEventListener('click', () => {
